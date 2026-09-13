@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trái Cây - Bài Học 1</title>
+    
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/flashcard.css"/>
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+    <div class="web">
+        <video id="webcam" style="position: abso" autoplay playsinline></video>
+    </div>
+    
+    <div class="modal accept">
+        <i class="fas fa-check icon"></i>
+        <h2>Tuyệt Vời!</h2>
+        <p>Đáp án của bạn đã được chấp nhận bởi hệ thống. Hãy tiếp tục!</p>
+        <button id="cls-ac">Tiếp tục</button>
+    </div>  
+
+    <div class="modal error">
+        <i class="fas fa-exclamation icon"></i>
+        <h2>Hãy thử lại!</h2>
+        <p>Đáp án của bạn không được chấp nhận bởi hệ thống. Hãy thử lại!</p>
+        <button id="cls-er">Thử lại</button>
+    </div>
+
+    <div class="container">
+        <div class="progress">
+            <div class="steps">
+                <span class="circle">1</span>
+                <span class="circle">2</span>
+                <span class="circle">3</span>
+                <span class="circle">4</span>
+                <span class="circle">5</span>
+                <span class="circle">6</span>
+                <div class="progress-bar">
+                <span class="indicator"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-wrapper">
+            <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+            <ul class="image-list">
+                
+
+                <!-- 1.Apple -->
+
+                <div class="card" data-name="apple">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbfg5S7Z0DSWGF4ciXuex_3cJmCP93JimofYNTb5DRsVgMXZLkrOEA7XvMcND92-oIUlX9kqMFJ--cvl8a3DNGW2SEh9E9BohQ=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Táo</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Táo là loại trái cây phổ biến được yêu thích bởi hương vị thơm ngon và giá trị dinh dưỡng cao. Quả táo thường có hình tròn hoặc hơi bầu dục, với kích thước đa dạng. Vỏ táo mỏng, mịn và có nhiều màu sắc như xanh lá, đỏ, vàng, tím. Thịt quả giòn, ngọt thanh hoặc chua ngọt tùy theo giống táo.</p>
+                        <button class="card-btn" id="open-popup-1">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Tay phải khép, khum lại, lòng bàn tay hướng vào trong, đặt sát vào cánh tay trái, đưa nhẹ tay lên - xuống &#40; lặp lại 2 - 3 lần &#41;</p>
+                        <video id="video" src="videos/apple.mp4" muted autoplay controls></video>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-1">Webcam</button>
+                        <button class="video-btn" id="open-video-1">Video</button>
+                        <button class="enable-btn" id="enable-1">Kích hoạt</button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- 2.Banana -->
+
+                <div class="card" data-name="banana">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY2V70rShE797dsivkAX58hQpsTu51XlCHMvx-6YqYh2gr9QeLLjz_LoQww2Eh4lwe03uUTy4Nl2wH0dgwqRwMk8PDh74NBr_E=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Chuối</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Chuối là loại trái cây nhiệt đới quen thuộc, được yêu thích bởi hương vị thơm ngon và giá trị dinh dưỡng cao. Quả chuối thường có hình cong cong như lưỡi liềm, mọc thành buồng trên cây. Khi chín, quả chuối chuyển sang màu vàng tươi, mềm và ngọt ngào.</p>
+                        <button class="card-btn" id="open-popup-2">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-2">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Tay trái nắm, lòng bàn tay hướng vào trong, đặt trước ngực. Tay phải nắm, ngón cái và ngón trỏ mở ra chạm vào nhàu, lòng bàn tay úp, đặt bên trên tay trái, đưa tay theo đường vòng cung xuống dưới &#40;2 lần &#41;</p>
+                        <div class="vid"><video id="video" src="videos/banana.mp4" muted autoplay controls loop></video></div>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-2">Webcam</button>
+                        <button class="video-btn" id="open-video-2">Video</button>
+                        <button class="enable-btn" id="enable-2">Kích hoạt</button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- 3.Grape -->
+
+                <div class="card" data-name="grape">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZE2MmBN56VvP0Grpme9cyIjPmkeM-kKc2-rmgYFhO_5JzkSObAfsA27fiqWWHPfrjyeNu0qqkuiIBTEWg-YjAhi0U2kj2VlJI=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Nho</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Nho là loại trái cây mọng nước, được ưa chuộng bởi hương vị ngọt ngào và đa dạng. Quả nho thường mọc thành chùm trên giàn leo, có kích thước nhỏ nhắn, hình tròn hoặc hơi bầu dục. Thịt quả nho mềm mại, mọng nước, vị ngọt thanh hoặc chua ngọt tùy theo giống nho. </p>
+                        <button class="card-btn" id="open-popup-3">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-3">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Tay trái giống số "1", lòng bàn tay và đầu ngón tay hướng xuống dưới, đặt trước ngực. Tay phải mở, ngón cái và ngón trỏ chạm nhau, giống chữ cái "O", lòng bàn tay hướng sang trái, đặt chạm vào gốc ngón trỏ trái, đưa tay xuống phía dưới 3 bậc đầu ngón trỏ trái. </p>
+                        <div class="vid"><video id="video" src="videos/grape.mp4" muted autoplay controls loop></video></div>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-3">Webcam</button>
+                        <button class="video-btn" id="open-video-3">Video</button>
+                        <button class="enable-btn" id="enable-3">Kích hoạt</button>
+                    </div>  
+                    </div>
+                </div>
+
+                <!-- 4.Watermelon -->
+
+                <div class="card" data-name="watermelon">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZrCMAHjcDC8RN7YRHNuwOKM2T-ghwZICZ-jmkjzreBUspOTzvD4e8KdQQWsgmSRvhHEg-6LyD3NDMYTH0TiEloDfi0XJWttg=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Dưa Hấu</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Dưa hấu là loại trái cây quen thuộc trong mùa hè với hương vị ngọt mát giải nhiệt. Quả dưa hấu thường có hình tròn hoặc hơi bầu dục, với kích thước đa dạng từ nhỏ đến lớn. Thịt quả dưa hấu có màu đỏ tươi hoặc vàng cam, mọng nước và giòn tan. </p>
+                        <button class="card-btn" id="open-popup-4">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-4">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Hai tay giống chữ cái "C", lòng bàn tay hướng vào nhau , đầu ngón tay hướng vào nhau, đặt song song trước ngực, đưa đồng thời hai tay theo đường cong về hai bên</p>
+                        <div class="vid"><video id="video" src="videos/watermelon.mp4" muted autoplay controls loop></video></div>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-4">Webcam</button>
+                        <button class="video-btn" id="open-video-4">Video</button>
+                        <button class="enable-btn" id="enable-4">Kích hoạt</button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- 5.Lemon -->
+
+                <div class="card" data-name="lemon">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpiha6ukdJL19_gJ5YBioLed1bPupIgN3qTMu-yIwnbcVR7AWjnXZDFdql7GavakezSuzLOanWvU9PQiTn0Qrl9jJRk_Tpvb-Nf18=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Chanh</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Trái chanh là một loại quả thuộc chi Cam chanh, có hình tròn hoặc hơi bầu dục, thường có màu xanh khi chưa chín và chuyển sang màu vàng khi chín. Kích thước của chanh dao động từ 3 đến 6 cm đường kính. Thịt chanh chia thành nhiều múi, chứa nhiều nước và có vị chua đặc trưng.</p>
+                        <button class="card-btn" id="open-popup-5">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-5">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Tay phải nắm, ngón cái, ngón trỏ, ngón giữa mở ra, khum lại, lòng bàn tay úp, đặt trước ngực, giữ nguyên cách tay, cử động các ngón tay vê vào nhau.</p>
+                        <div class="vid"><video id="video" src="videos/lemon.mp4" muted autoplay controls loop></video></div>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-5">Webcam</button>
+                        <button class="video-btn" id="open-video-5">Video</button>
+                        <button class="enable-btn" id="enable-5">Kích hoạt</button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- 6.Orange -->
+
+                <div class="card" data-name="orange">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbnHwghVFim8sC-k2Z5HqyDddNhPUWLpsjAtAS8DJRuiEfXp9lfBtAMn5Lwc4pjEkkLwll8t3xkqlxo2C_T4SnEdXXqRNYx0X0=s1600-rw-v1" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Quả Cam</h1>
+                        <p class="card-sub-tile">Trái cây</p>
+                        <p class="card-info">Cam là loại trái cây quen thuộc, được yêu thích bởi hương vị thơm ngon, màu sắc rực rỡ và giá trị dinh dưỡng cao. Quả cam thường có hình cầu hoặc hơi dẹt, với kích thước đa dạng từ nhỏ đến lớn. Thịt quả cam mọng nước, có màu vàng hoặc cam.</p>
+                        <button class="card-btn" id="open-popup-6">Hướng dẫn</button>
+                    </div>
+                </div>
+                <div class="popup" id="popup-6">
+                    <div class="overlay"></div>
+                    <div class="popup-content">
+                        <h2 id="title">Hướng Dẫn</h2>
+                        <p>Tay phải mở, khum lại, lòng bàn tay úp, đặt trước ngực, giữ nguyên cách tay, cử động các ngón tay vê vào nhau giống động tác vắt nước cam.</p>
+                        <div class="vid"><video id="video" src="videos/orange.mp4" muted autoplay controls loop></video></div>
+                    <div class="controls">
+                        <button class="close-btn">Thoát</button>
+                        <button class="webcam-btn" id="open-webcam-6">Webcam</button>
+                        <button class="video-btn" id="open-video-6">Video</button>
+                        <button class="enable-btn" id="enable-6">Kích hoạt</button>
+                    </div>
+                    </div>
+                </div>
+            </ul>
+            <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/lesson.js" defer></script>
+</body>
+</html>
